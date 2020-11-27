@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="jokeKey">joke</string>
+    <string name="sample_joke">Sample Joke</string>
+</resources>

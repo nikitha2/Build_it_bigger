@@ -1,0 +1,3 @@
+include ':JokesActivitiesLib'
+include ':JokesJavaLib'
+include ':app', ':backend'
