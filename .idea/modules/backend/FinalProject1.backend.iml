@@ -27,6 +27,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Gradle: FinalProject1.backend.backend" level="project" />
+    <orderEntry type="module" module-name="FinalProject1.JokesJavaLib" />
     <orderEntry type="library" name="Gradle: com.google.endpoints:endpoints-framework:2.0.10" level="project" />
     <orderEntry type="module-library">
       <library name="Gradle: javax.inject:javax.inject:1">

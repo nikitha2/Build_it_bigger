@@ -12,6 +12,7 @@ import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
+import com.udacity.gradle.builditbigger.backend.myApi.model.MyBean;
 
 import java.io.IOException;
 
@@ -28,9 +29,9 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
                     // options for running against local devappserver
                     // - 10.0.2.2 is localhost's IP address in Android emulator
                     // - turn off compression when running against local devappserver
-                   .setRootUrl("http://10.0.2.2:8080/_ah/api/")
- //                   .setRootUrl("http://localhost:8080/")
- //                   .setRootUrl("http://192.168.1.72:8080/")
+                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                    //                   .setRootUrl("http://localhost:8080/")
+                    //                   .setRootUrl("http://192.168.1.72:8080/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
@@ -46,7 +47,8 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
         String name = params[0].second;
 
         try {
-            return myApiService.sayHi(name).execute().getData();
+           // return myApiService.sayHi(name).execute().getData();
+            return myApiService.fetchJokes(new MyBean()).execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
